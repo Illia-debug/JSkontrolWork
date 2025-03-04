@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let post=JSON.parse(localStorage.getItem('post'))
+    // console.log(post)
+    for (const postKey in post) {
+        let h2Element = document.createElement('h2');
+        h2Element.innerText=postKey+':'+post[postKey]
+        document.body.appendChild(h2Element)
+    }
+</script>
+</body>
+</html>
