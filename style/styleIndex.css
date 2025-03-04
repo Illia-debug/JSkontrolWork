@@ -1,0 +1,11 @@
+main{
+    padding-top: 100px;
+    padding-left: 20%;
+}
+button{
+    display: block;
+}
+div{
+    display: inline-block;
+    width: 50%;
+}
