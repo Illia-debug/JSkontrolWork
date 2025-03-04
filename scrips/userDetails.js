@@ -1,5 +1,6 @@
 let user = JSON.parse(localStorage.getItem('user'));
 let buttonPost = document.getElementById('post');
+let mainElement=document.getElementsByTagName('main')
 buttonPost.onclick = () => {
     let url = new URL('https://jsonplaceholder.typicode.com/posts')
     url.searchParams.set('userId', user.id)
@@ -31,18 +32,17 @@ buttonPost.addEventListener('click', () => {
         elementsDivElement.remove()
     }
 })
-let mainElement=document.getElementsByTagName('main')
 // console.log(mainElement[0])
 for (let fieldName in user) {
     if (typeof user[fieldName] !== 'object') {
         let htmlDivElement = document.createElement('div');
         htmlDivElement.innerText = fieldName + '-' + user[fieldName]
-        document.body.appendChild(htmlDivElement)
+        mainElement[0].appendChild(htmlDivElement)
         // console.log(fieldName, user[fieldName]);
     } else if (typeof user[fieldName] === 'object') {
         let htmlDivElement1 = document.createElement("div");
         htmlDivElement1.innerText = fieldName + ':'
-        document.body.appendChild(htmlDivElement1)
+        mainElement[0].appendChild(htmlDivElement1)
         for (fildNameNext in user[fieldName]) {
             if (typeof user[fieldName][fildNameNext] !== 'object') {
                 let htmlDivElement2 = document.createElement("div");
@@ -55,7 +55,7 @@ for (let fieldName in user) {
                     let nameField = user[fieldName][fildNameNext]
                     let htmlDivElement3 = document.createElement('div');
                     htmlDivElement3.innerText = key + ':' + nameField[key]
-                    document.body.appendChild(htmlDivElement3)
+                    mainElement[0].appendChild(htmlDivElement3)
                 }
             }
         }

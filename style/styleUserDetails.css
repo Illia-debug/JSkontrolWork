@@ -1,5 +1,25 @@
 
+main{
+    margin-top: 20vh;
+    padding-left: 20vw;
+}
 div{
+    margin-left: 20px;
+    font-size: 20px;
+}
+button{
+    margin-left:5%;
+    width: 90%;
+    color: darkolivegreen;
+    background-color: darkgrey;
+    height: 30px;
+    border-radius: 10px;
+}
+.cicle2{
+    width: 300px;
+   color: red;
+    background-color: silver;
+}
+p{
 
-    width: 200px;
 }
