@@ -12,7 +12,7 @@ buttonPost.onclick = () => {
                 let button = document.createElement('button');
                 button.innerText='post-details'
                 pElement.innerText = post.title;
-                document.body.appendChild(pElement)
+                mainElement[0].appendChild(pElement)
                 pElement.appendChild(button);
                 button.onclick=()=>{
                     let baseUrl='http://localhost:63342/JSkontrolWork/post-details.html?_ijt=uvvskqidg2hlo3gdc9mgc3jpdt&_ij_reload=RELOAD_ON_SAVE'
@@ -32,7 +32,7 @@ buttonPost.addEventListener('click', () => {
         elementsDivElement.remove()
     }
 })
-// console.log(mainElement[0])
+
 for (let fieldName in user) {
     if (typeof user[fieldName] !== 'object') {
         let htmlDivElement = document.createElement('div');
