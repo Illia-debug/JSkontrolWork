@@ -11,8 +11,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let main = document.getElementsByTagName('main');
             main[0].appendChild(divBlock)
             buttonElement.onclick=()=>{
-                let baseUrl='http://localhost:63342/JSkontrolWork/user-details.html?_ijt=th0s6vnpdf09b159lsb3osa4ep&_ij_reload=RELOAD_ON_SAVE'
-                let url =new URL(baseUrl);
+                let url ='user-details.html';
                 location.href = url;
                 localStorage.setItem('user',JSON.stringify(element))
             }

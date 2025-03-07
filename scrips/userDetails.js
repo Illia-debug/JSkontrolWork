@@ -15,8 +15,7 @@ buttonPost.onclick = () => {
                 mainElement[0].appendChild(pElement)
                 pElement.appendChild(button);
                 button.onclick=()=>{
-                    let baseUrl='http://localhost:63342/JSkontrolWork/post-details.html?_ijt=uvvskqidg2hlo3gdc9mgc3jpdt&_ij_reload=RELOAD_ON_SAVE'
-                    let url =new URL(baseUrl);
+                    let url ='post-details.html';
 
                     location.href = url;
                     localStorage.setItem('post',JSON.stringify(post))
